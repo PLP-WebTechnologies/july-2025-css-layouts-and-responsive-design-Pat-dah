@@ -1,0 +1,127 @@
+/* 
+   Global Styles
+    */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* 
+   Header with Flexbox
+   */
+.header {
+  display: flex;                  /* Flexbox for header layout */
+  justify-content: space-between; /* Space between title and nav */
+  align-items: center;
+  background: #4a90e2;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* 
+  Hero Section
+   */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #e6f0fa;
+}
+
+.hero h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* 
+   Main Grid Layout
+   */
+.grid-container {
+  display: grid;                      /* Grid container */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.grid-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 
+   Footer
+    */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #4a90e2;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* 
+   Responsive Media Queries
+    */
+
+/* Tablets (≤ 900px) */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 4 */
+  }
+
+  .header {
+    flex-direction: column; /* Stack logo and nav */
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 1.2rem;
+  }
+}
